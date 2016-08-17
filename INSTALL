@@ -1,0 +1,37 @@
+INDI ServoBlaster Cap 0.1 - (beta)
+==================================
+
+You must have CMake >= 2.8 in order to build this package.
+
+indi_servoblaster_cap
+==================
+
+1) $ cd ~/Projects
+2) $ git clone https://github.com/magnue/indi_servoblaster_cap.git
+3) $ cd indi_servoblaster_cap
+4) $ mkdir build
+5) $ cd build
+6) $ cmake -DCMAKE_INSTALL_PREFIX=/usr . ..
+7) $ sudo make install
+
+Dependencies
+============
+
++ libindi and it's dependencies
+    # To to build libindi from source 
+        # http://www.indilib.org/forum/general/210-howto-building-latest-libindi-ekos.html
+
++ servoblaster
+    $ cd ~/Projects
+    $ git clone https://github.com/richardghirst/PiBits.git
+    $ cd PiBits/ServoBlaster/user/
+    $ sudo make servod
+    $ ./servod
+
++ (optinal) INDI USBRelay2 Roof
+    # To build from source
+        # https://github.com/magnue/indi_usbrelay2_roof.git
+
++ (optional) WiringPi GPIO
+    # To build from source
+        # https://github.com/magnue/indi_wiringpi_gpio.git

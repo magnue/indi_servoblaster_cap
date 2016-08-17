@@ -1,0 +1,6 @@
+<devGroup group="Auxiliary">
+	<device label="ServoBlaster Cap">
+        <driver name="ServoBlaster Cap">indi_servoblaster_cap</driver>
+        <version>0.1</version>
+	</device>
+</devGroup>
