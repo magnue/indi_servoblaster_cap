@@ -20,6 +20,7 @@
   file called LICENSE.
 *******************************************************************************/
 #include <parkdata.h>
+#include <string.h>
 
 Parkdata::Parkdata()
 {

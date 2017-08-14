@@ -24,6 +24,7 @@
 #include "servoblaster_cap.h"
 
 #include <memory>
+#include <string.h>
 
 #define CALIB_TAB "Calibrate"
 
@@ -510,13 +511,6 @@ bool ServoBlasterCap::MoveStep(double toMove)
 
 bool ServoBlasterCap::EnableLightBox(bool enable)
 {   
-    // Do not control light when parked, only when unparked or parking
-    if (ParkCapS[0].s == ISS_ON && !isMoving)
-    {
-        DEBUG(INDI::Logger::DBG_ERROR, "Cannot control light while cap is parked.");
-        return false;
-    }
-
     int powerSwitch = LightSwitchN[0].value;
     bool usbrelay2 = LightTypeS[0].s == ISS_ON ? true : false;
     

@@ -14,7 +14,6 @@ set(DATA_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/share/indi/")
 
 include (MacroBoolTo01)
 
-FIND_PACKAGE(INDI REQUIRED)
 FIND_PACKAGE(INDIDriver REQUIRED)
 
 macro_bool_to_01(INDI_DRIVER_LIBRARIES HAVE_INDIDRIVER_LIB)
@@ -33,7 +32,7 @@ set(servoblaster_cap_SRCS
    )
 
 add_executable(indi_servoblaster_cap ${servoblaster_cap_SRCS})
-target_link_libraries(indi_servoblaster_cap ${INDI_LIBRARIES} ${INDI_DRIVER_LIBRARIES})
+target_link_libraries(indi_servoblaster_cap ${INDI_DRIVER_LIBRARIES})
 install(TARGETS indi_servoblaster_cap RUNTIME DESTINATION bin )
 install( FILES ${CMAKE_SOURCE_DIR}/servoblaster_cap/indi_servoblaster_cap.xml DESTINATION ${DATA_INSTALL_DIR})
 
