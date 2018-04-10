@@ -31,6 +31,8 @@
 #include "indidustcapinterface.h"
 #include "indilightboxinterface.h"
 
+#include <cstring>
+
 class ServoBlasterCap : public INDI::DefaultDevice, public INDI::DustCapInterface, public INDI::LightBoxInterface
 {
     public:
