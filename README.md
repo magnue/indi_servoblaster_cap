@@ -1,6 +1,9 @@
 ## INDI ServoBlaster Cap
 ------------------------
 
+#### Deprecation notice
+As I am not using a Rasberry Pi or a Odroid for my observatory any longer, I will not have a need for this driver, or the means to build and debug it. You can continue using this driver, at your own initiative, but I might not be able to help if you post an issue.
+
 ### Summary
 INDI ServoBlaster Cap is a dust cap 'driver' compatible with INDI and EKOS, and built with the ServoBlaster interface.
 ServoBlaster Cap does not have any hardware associated with it, other than it will work with a 'rc style' servo. The 'Cap' part must be built as a DIY project. Most servos is 4.8v and a old phone charger or similar would work as a powersupply. If you use a servo that is not 4.8v then change powersupply accordingly. The servo must use a PWM signal input in the range of '0.4 -> 1.3ms as 90 degree left', '1.5ms as centre', and '1.6 -> 2.6ms as right'. Most servos work at (0.5-1), 1.5, (2-2.5), but the range is set slightly higher to allow calibration to work with all servos.
